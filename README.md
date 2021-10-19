@@ -1,4 +1,4 @@
-# Latency cores vs Throughput cores
+# Latency cores vs throughput cores
 
 Latency cores stand for CPU and throughput cores stand for GPU cores. This is due to the difference between GPUs and CPUs. 
 
