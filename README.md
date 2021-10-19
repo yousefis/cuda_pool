@@ -15,3 +15,4 @@ CPUs are used for the serial computations in which low latency is needed while G
 # What is CUDA?
 
 CUDA is a programming API for hetregenous parallel programming. 
+![CPU vs GPU](./images/grids.png)
