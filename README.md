@@ -16,6 +16,6 @@ CPUs are used for the serial computations in which low latency is needed while G
 # What is CUDA?
 
 CUDA is a programming API for hetregenous parallel programming. 
-The idea of CUDA programming is different parts of the data can be analysed independently from each other. The parallel computing using CUDA is based on device+host, in which host stands for the CPU and device stands for GPU.
+The idea of CUDA programming is different parts of the data can be analysed independently from each other. The parallel computing using CUDA is based on device+host, in which host means the CPU and device means the GPU.
 
 ![CPU vs GPU](./images/grids.png)
