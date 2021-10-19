@@ -4,7 +4,7 @@ Latency cores stand for CPU and throughput cores stand for GPU cores. This is du
 while on GPUs there are many registry in order to make the threading process possible.
 CPUs are used for the serial computations in which low latency is needed while GPUs are used for parallel computation in which high throughput is required. 
 
-![CPU vs GPU](./images/cup-gpu.png)
+![CPU vs GPU](./images/cpu-gpu.png)
 
 # What is CUDA?
 
