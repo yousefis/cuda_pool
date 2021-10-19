@@ -2,7 +2,7 @@
 
 Latency cores stand for CPU and throughput cores stand for GPU cores. This is due to the difference between GPUs and CPUs. 
 
-In CPUs we have a few number of powerful arithmetic logic units (ALU) for reducing the computation latency, a large cache memory for reducing the data accessing latency and a control unit for reducing the data flowing latency. 
+Look at Fig. 1. In CPUs we have a few number of powerful arithmetic logic units (ALU) for reducing the computation latency, a large cache memory for reducing the data accessing latency and a control unit for reducing the data flowing latency. 
 
 In GPUs we have a large number of power efficient and slow ALUs and small cache memory units. In every data cycle ALUs throughput the outputs. The cache memory units different from CPUs is used for consolidating the data distribution between the ALUs. In CPUs there are a few registry 
 
@@ -15,4 +15,6 @@ CPUs are used for the serial computations in which low latency is needed while G
 # What is CUDA?
 
 CUDA is a programming API for hetregenous parallel programming. 
+The idea of CUDA programming is different parts of the data can be analysed independently from each other. The parallel computing using CUDA is based on device+host, in which host stands for the CPU and device stands for GPU.
+
 ![CPU vs GPU](./images/grids.png)
