@@ -1,1 +1,3 @@
-# cuda_pool
+# What is CUDA?
+
+CUDA is a programming API for hetregenous parallel computation. 
