@@ -20,4 +20,8 @@ The idea of CUDA programming is different parts of the data can be analysed inde
 
 ![CPU vs GPU](./images/grids.png)
 
+CUDA is a high-level programming language similar to C/C++. However for fully undrestanding CUDA we have to go a bit into the Istruction set architecture (ISA). ISA a contract between software and hardware. ISA is a set of instruction that the hardware can execute. 
 
+The below picture is a simple schema from how the Von-Neumann processor is working. A thread is an abstraction of the Von-Neumann processor.
+
+![Von-Neumann architecture](Von-Neumann-architecture.jpg)
