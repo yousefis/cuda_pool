@@ -24,4 +24,4 @@ CUDA is a high-level programming language similar to C/C++. However for fully un
 
 The below picture is a simple schema from how the Von-Neumann processor is working. A thread is an abstraction of the Von-Neumann processor.
 
-![Von-Neumann architecture](Von-Neumann-architecture.jpg)
+![Von-Neumann architecture](./images/Von-Neumann-architecture.jpg)
