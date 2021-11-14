@@ -26,7 +26,11 @@ The below picture is a simple schema from how the Von-Neumann processor is worki
 
 ![Von-Neumann architecture](./images/Von-Neumann-architecture.jpg)
 
-Threads in the same block can cooprate via shared memory, atomic operations, and barrier synchronization. 
+Threads in the same block can cooprate via shared memory, atomic operations, and barrier synchronization. However threads in diffrerent blocks don't intract. 
+The block index can be 1D, 2D, or 3D depends on the data type like sequences, images or volums. 
+
+# Device memory allocation, and host to device data transfer
+
 
 # Resources
 
