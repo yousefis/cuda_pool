@@ -30,18 +30,18 @@ Threads in the same block can cooprate via shared memory, atomic operations, and
 The block index can be 1D, 2D, or 3D depends on the data type like sequences, images or volums. 
 
 # Device memory allocation, and host to device data transfer
-cudaMalloc: allocating memory for variables on the device.
+**cudaMalloc**: allocating memory for variables on the device.
 ```
 float* d_var; 
 size_t size = 100 * sizeof(float);
 cudaMalloc((void**)d_var, size);
 ```
-cudaMemcpy: copying a variable from host to device or the other way around.
+**cudaMemcpy**: copying a variable from host to device or the other way around.
 ```
 cudaMemcpy((void*)h_a, d_a, size, cudaMemcpyHostToDevice);
 cudaMemcpy(d_a, (void*)h_a, size, cudaMemcpyDeviceToHost);
 ```
-cudaFree: free the allocated memory.
+**cudaFree**: free the allocated memory.
 ```
 cudaFree(d_a);
 ```
