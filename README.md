@@ -26,7 +26,7 @@ The below picture is a simple schema from how the Von-Neumann processor is worki
 
 ![Von-Neumann architecture](./images/Von-Neumann-architecture.jpg)
 
-
+Threads in the same block can cooprate via shared memory, atomic operations, and barrier synchronization. 
 
 # Resources
 
