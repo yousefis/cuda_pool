@@ -49,3 +49,5 @@ cudaFree(d_a);
 # Resources
 
 [1] Heterogeneous Parallel Programming by Wen-mei W. Hwu (University of Illinois)
+
+# If this repository helps you in anyway, show your love :heart: by putting a :star: on this project 
