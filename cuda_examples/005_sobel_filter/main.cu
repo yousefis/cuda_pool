@@ -11,7 +11,7 @@
 //this file adds two vectors using a cuda kernel
 int main(int argc,char* argv[])
 {
-   assert(argc==4&&"Call: ./main image1 image2 image_result");
+   assert(argc==4&&"Call: ./main image image_result");
   
    cv::Mat img1, img2;
    //Here I have rgb images and just read a channel of the images to make 2D matrices
