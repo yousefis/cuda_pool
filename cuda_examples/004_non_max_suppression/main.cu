@@ -14,3 +14,7 @@
 // the rest is the bounding boxes with this structure: [x_c, y_c, w, h, conf, class_id]
 // call it like: non_max_suppresion(float* yolo_output, float nms_thresh, float conf)
 
+int main(int argc,char* argv[])
+{
+
+}
