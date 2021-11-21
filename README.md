@@ -1,3 +1,5 @@
+# If this repository helps you in anyway, show your love :heart: by putting a :star: on this project 
+
 # Latency cores vs throughput cores
 
 Latency cores stand for CPU and throughput cores stand for GPU cores. This is due to the difference between GPUs and CPUs. 
@@ -50,4 +52,3 @@ cudaFree(d_a);
 
 [1] Heterogeneous Parallel Programming by Wen-mei W. Hwu (University of Illinois)
 
-# If this repository helps you in anyway, show your love :heart: by putting a :star: on this project 
