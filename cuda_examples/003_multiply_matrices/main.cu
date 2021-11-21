@@ -12,18 +12,22 @@
 
 void fill_matrix(float* matrix, int w, int h)
 {
-    for(int c=0;c<w;c++)
-        for (int r=0; r<h; r++)
-            matrix[r*w+c] = r*w+c;
+    std::cout<<w<<","<<h<<"\n";
+    int p=0;
+    for (int r=0; r<w; r++)
+        for(int c=0;c<h;c++)        
+            matrix[r*h+c] = p++;// r*w+c;
+            
+
 }
 void print_matrix(float* array, int W, int H)
 {
     std::cout<<"\n------\n";
-    for (int i=0; i<W; i++)
+    for (int r=0; r<W; r++)
     {
-        for (int j=0; j<H; j++)
+        for (int c=0; c<H; c++)
         {
-            std::cout<<array[i*W+j]<<" ";
+            std::cout<<array[r*H+c]<<" ";
         }
         std::cout<<"\n";
     }
@@ -34,7 +38,7 @@ int main(int argc,char* argv[])
 {
     float *host_a, *host_b, *host_c;
     float *device_a, *device_b, *device_c;
-    const int M=5, N=3, K=7;
+    const int M=4, N=3, K=5;
     // initialize the host variables
     host_a = (float*) malloc(M*N*sizeof(float));
     host_b = (float*) malloc(N*K*sizeof(float));
@@ -54,10 +58,14 @@ int main(int argc,char* argv[])
     cudaMemcpy((void*)device_b, host_b, N*K*sizeof(float), cudaMemcpyHostToDevice);
 
     // call kernel
+    const clock_t begin_time = clock();
+
     dim3 gridDim((M-1)/16+1, (K-1)/16+1, 1);
     dim3 blockDim(16,16,1);
-    std::cout<<M<<", "<<N<<", "<<K<<"\n\n";
+    std::cout<<"Multiplication of two matrices with the below sizes:\n";
+    std::cout<<"A_("<<M<<"*"<<N<<") * B_("<<N<<"*"<<K<<") = C_("<<M<<"*"<<K<<")\n\n";
     multiply_matrices<<<gridDim, blockDim>>>(device_a, device_b, device_c, M,N,K);
+    std::cout <<"Elapsed time: "<< float( clock () - begin_time ) /  CLOCKS_PER_SEC<<"\n\n";
 
     // copy result to host
     cudaMemcpy((void*)host_c , device_c, K*M*sizeof(float), cudaMemcpyDeviceToHost);

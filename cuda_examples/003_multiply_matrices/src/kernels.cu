@@ -17,6 +17,9 @@ void multiply_matrices(float* a, float* b, float* c,  size_t M, size_t N, size_t
     if(col>=K) return;
 
     for(int k=0; k<N ;k++)
-        c[row*M + col] += a[row*M + k] * b[k*N + col];
+        {
+            c[row*K + col] += a[row*N + k] * b[k*K + col];
+            
+        }
 }
 
