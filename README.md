@@ -48,17 +48,13 @@ cudaMemcpy(d_a, (void*)h_a, size, cudaMemcpyDeviceToHost);
 cudaFree(d_a);
 ```
 # Examples
-[Adding vectors](https://github.com/yousefis/cuda_pool/tree/main/cuda_examples/001_add_vectors)
+* [Adding vectors](https://github.com/yousefis/cuda_pool/tree/main/cuda_examples/001_add_vectors)
+* [Adding images](https://github.com/yousefis/cuda_pool/tree/main/cuda_examples/002_add_images)
+* [Matrix multiplication](https://github.com/yousefis/cuda_pool/tree/main/cuda_examples/003_multiply_matrices)
+* [Non max supresion](https://github.com/yousefis/cuda_pool/tree/main/cuda_examples/004_non_max_suppression)
+* [Image edge detetcion](https://github.com/yousefis/cuda_pool/tree/main/cuda_examples/005_sobel_edge_detection)
+* [Image bluring](https://github.com/yousefis/cuda_pool/tree/main/cuda_examples/006_gaussian_filter)
 
-[Adding images](https://github.com/yousefis/cuda_pool/tree/main/cuda_examples/002_add_images)
-
-[Matrix multiplication](https://github.com/yousefis/cuda_pool/tree/main/cuda_examples/003_multiply_matrices)
-
-[Non max supresion](https://github.com/yousefis/cuda_pool/tree/main/cuda_examples/004_non_max_suppression)
-
-[Image edge detetcion](https://github.com/yousefis/cuda_pool/tree/main/cuda_examples/005_sobel_edge_detection)
-
-[Image bluring](https://github.com/yousefis/cuda_pool/tree/main/cuda_examples/006_gaussian_filter)
 # Resources
 
 [1] Heterogeneous Parallel Programming by Wen-mei W. Hwu (University of Illinois)
