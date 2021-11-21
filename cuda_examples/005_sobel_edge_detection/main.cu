@@ -11,7 +11,7 @@
 //this file adds two vectors using a cuda kernel
 int main(int argc,char* argv[])
 {
-   assert(argc==4&&"Call: ./main image image_result");
+   assert(argc==3&&"Call: ./main image image_result");
   
    cv::Mat img1, img2;
    //Here I have rgb images and just read a channel of the images to make 2D matrices
@@ -56,8 +56,8 @@ int main(int argc,char* argv[])
 
    //convert the result array to cv::Mat and save 
    cv::Mat mat_result(img1.size[0],img1.size[1],CV_8UC1,result);
-   cv::imwrite(argv[3], mat_result);
-   std::cout<<"The result can be found: "<<argv[3]<<"\n";
+   cv::imwrite(argv[2], mat_result);
+   std::cout<<"The result can be found: "<<argv[2]<<"\n";
    
    //free allocated memory
    cudaFree(device_img1);

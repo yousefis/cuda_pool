@@ -13,11 +13,11 @@ void sobel_filter(uchar* img1, uchar* result, size_t height, size_t width)
 
     if (row>=width) return;
     if (col>=height) return;
-    float Gx = img1[(row-1)*height+(col-1)] - img1[(row-1)*height+(col+1)]+
-         2 * img1[row*height+(col-1)] - 2 * img1[row*height+(col+1)]+
-         img1[(row+1)*height+(col-1)] - img1[(row+1)*height+(col+1)];
-    float Gy = img1[(row-1)*height+(col-1)] + 2 * img1[(row-1)*height+col] + img1[(row-1)*height+(col+1)]+
-               (-1) * img1[(row+1)*height+(col-1)] + (-2) * img1[(row+1)*height+col] + (-1) * img1[(row+1)*height+(col+1)];
+    float Gx = float(img1[(row-1)*height+(col-1)]) - float(img1[(row-1)*height+(col+1)])+
+         2 * float(img1[row*height+(col-1)]) - 2 * float(img1[row*height+(col+1)])+
+         float(img1[(row+1)*height+(col-1)]) - float(img1[(row+1)*height+(col+1)]);
+    float Gy = float(img1[(row-1)*height+(col-1)]) + 2 * float(img1[(row-1)*height+col]) + float(img1[(row-1)*height+(col+1)])+
+               (-1) * float(img1[(row+1)*height+(col-1)]) + (-2) * float(img1[(row+1)*height+col]) + (-1) * float(img1[(row+1)*height+(col+1)]);
     result[row*height + col] = sqrt (Gx*Gx + Gy*Gy);
         
 }
